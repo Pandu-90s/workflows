@@ -8,10 +8,16 @@ on:
       component: 
         required: true
         type: string
+env:
+  project: "${{ inputs.project}}"
+  component: "${{ inputs.component }}"
 jobs:
   build-nodejs: 
     runs-on: ubuntu-latest
     steps:
-    - name: read version
+    - name: code checkout
+      uses: action/checkout@v7
+      
+    - name: list files
       run: |
-        echo project "${{ inputs.project }}"
+        ls -l
