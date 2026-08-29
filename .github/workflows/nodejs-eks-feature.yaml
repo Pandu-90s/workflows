@@ -1,7 +1,7 @@
 name: nodejs eks feature
 
 on:
-  workflow_call:
+  workflow_dispatch:
     inputs:
       project:
         required: true
@@ -21,7 +21,7 @@ jobs:
 
     steps:
       - name: code checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: list files
         run: |
