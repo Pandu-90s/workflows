@@ -1,6 +1,6 @@
 name: nodejs eks feature
 on:
-  workflow_call:
+  workflow_dispatch:
     inputs:
       project:
         required: true
