@@ -30,7 +30,7 @@ jobs:
       - name: read version
         id: version
         run: | 
-          VERSION=$(jq -r ''.version' package.json)
+          VERSION=$(jq -r '.version' package.json)
           echo "version=$VERSION" >> $GITHUB_OUTPU
       
       - name: print version 
